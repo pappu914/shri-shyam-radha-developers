@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Download Option</title>
+</head>
+<body>
+  <h1>Download Generated Image</h1>
+  
+  <!-- Display the image -->
+  <img id="generatedImage" src="image-url-here.jpg" alt="Generated Image" style="max-width: 100%; height: auto;">
+  
+  <!-- Download button -->
+  <p>
+    <a id="downloadLink" href="image-url-here.jpg" download="generated-image.jpg">
+      <button>Download Image</button>
+    </a>
+  </p>
+  
+  <script>
+    // Example: Dynamically update the download link (if needed)
+    const imageUrl = "image-url-here.jpg"; // Replace with the actual image URL
+    const downloadLink = document.getElementById("downloadLink");
+    const generatedImage = document.getElementById("generatedImage");
+
+    // Update the link href dynamically
+    downloadLink.href = imageUrl;
+    generatedImage.src = imageUrl;
+  </script>
+</body>
+</html>
